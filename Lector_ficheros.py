@@ -1,4 +1,4 @@
-
+# Viktor
 from os import walk
 
 lista_archivos = []
