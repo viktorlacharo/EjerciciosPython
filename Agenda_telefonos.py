@@ -1,5 +1,5 @@
 #En caso de necesitar una agenda vacía borrar estos datos
-#Viktor L. 
+#Viktor L.
 agenda = {"Viktor": "321654987", "Viktor2": "321654987"}
 
 run = True
@@ -34,8 +34,12 @@ def borrar_clave_valor():
 
         nombre_a_borrar = input(
             "Escribe el nombre de la persona que deseas borrar de tu agenda.\n").title()
-        agenda.pop(nombre_a_borrar, None)
-        print(f"Borrado {nombre_a_borrar} correctamente.")
+        try:
+            agenda.pop(nombre_a_borrar)
+            print(f"Borrado {nombre_a_borrar} correctamente.")
+        except KeyError:
+            print("El nombre que intentas borrar no existe.")
+       
 
 
 def buscar_por_numero():
