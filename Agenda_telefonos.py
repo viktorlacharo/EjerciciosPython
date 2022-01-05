@@ -1,5 +1,5 @@
 #En caso de necesitar una agenda vacía borrar estos datos
-#Viktor L.
+#Viktor L. 
 agenda = {"Viktor": "321654987", "Viktor2": "321654987"}
 
 run = True
