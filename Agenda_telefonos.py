@@ -47,13 +47,16 @@ def buscar_por_numero():
     if bool(agenda) == False:
         print("Vaya, al parecer no tienes contactos en la agenda.")
     else:
-        print(f"Estos son los números que tienes en la agenda\n")
+        print(f"Estos son los nombres que tienes en la agenda\n")
         for k in agenda.keys():
             print(f"---> {k}.")
         nombre_a_buscar = str(input(
             "Introduce el nombre de la persona que deseas conocer el número.\n")).title()
+            # Parámetro que almacena la longitud de los caracteres del nombre_a_buscar, para comprobar si inicia con dichos caracteres. 
+        nombre_corto = nombre_a_buscar[:len(nombre_a_buscar)]
+
         for nombre, numero in agenda.items():
-            if nombre == nombre_a_buscar:
+            if nombre.startswith(nombre_corto):
                 print(f"El número de {nombre}: {numero}.")
 
 
